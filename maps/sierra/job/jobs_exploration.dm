@@ -23,7 +23,7 @@
 						SKILL_SCIENCE     = SKILL_MAX,
 						SKILL_COMBAT      = SKILL_EXPERT,
 						SKILL_WEAPONS     = SKILL_EXPERT)
-	skill_points = 22
+	skill_points = 26
 
 	access = list(access_el, access_explorer, access_eva, access_bridge, access_heads, access_emergency_storage, access_tech_storage, access_guppy_helm, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar)
 
@@ -130,18 +130,19 @@
 	allowed_ranks = list(/datum/mil_rank/civ/nt, /datum/mil_rank/civ/contractor)
 
 	minimal_player_age = 8
-	skill_points = 26
+	skill_points = 22
 	economic_power = 8
 
 
 	min_skill = list(	SKILL_EVA     = SKILL_BASIC,
-						SKILL_MEDICAL = SKILL_BASIC,
+						SKILL_MEDICAL = SKILL_EXPERT,
 						SKILL_HAULING = SKILL_BASIC,
-						SKILL_SCIENCE = SKILL_BASIC,
-						SKILL_ANATOMY = SKILL_BASIC)
+						SKILL_ANATOMY = SKILL_EXPERT,
+						SKILL_SCIENCE = SKILL_BASIC)
 
 	max_skill = list(	SKILL_MEDICAL = SKILL_MAX,
 						SKILL_SCIENCE = SKILL_MAX,
+						SKILL_ANATOMY = SKILL_MAX,
 						SKILL_COMBAT  = SKILL_EXPERT,
 						SKILL_WEAPONS = SKILL_EXPERT)
 
@@ -175,7 +176,7 @@
 	allowed_branches = list(/datum/mil_branch/employee, /datum/mil_branch/contractor)
 	allowed_ranks = list(/datum/mil_rank/civ/nt, /datum/mil_rank/civ/contractor)
 
-	skill_points = 20
+	skill_points = 24
 
 	min_skill = list(	SKILL_EVA          = SKILL_BASIC,
 						SKILL_CONSTRUCTION = SKILL_BASIC,
