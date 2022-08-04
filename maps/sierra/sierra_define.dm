@@ -1,6 +1,6 @@
 /datum/map/sierra
 	name = "Sierra"
-	full_name = "NSV Sierra"
+	full_name = "Project Utopia"
 	path = "sierra"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 
@@ -17,15 +17,15 @@
 	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
 	default_spawn = "Cryogenic Storage"
 
-	station_name  = "NSV Sierra"
-	station_short = "Sierra"
+	station_name  = "ИКН Сиерра"
+	station_short = "Сиерра"
 	dock_name     = "TBD"
-	boss_name     = "Central Command"
-	boss_short    = "Centcomm"
-	company_name  = "NanoTrasen"
-	company_short = "NT"
+	boss_name     = "Центральное Комаднование" // жёстко переименовал, надеюсь не баганёт. бодя.
+	boss_short    = "Центкомм"
+	company_name  = "НаноТрейзен"
+	company_short = "НТ"
 
-	map_admin_faxes = list("NanoTrasen Central Office")
+	map_admin_faxes = list("Центральное Командование НаноТрейзен")
 
 	evac_controller_type = /datum/evacuation_controller/starship/fast
 
