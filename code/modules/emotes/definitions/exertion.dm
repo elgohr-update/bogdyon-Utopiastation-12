@@ -2,8 +2,8 @@
 /decl/emote/exertion/biological
 	key = "esweat"
 	emote_range = 4
-	emote_message_1p = "You are sweating heavily."
-	emote_message_3p = "USER is sweating heavily."
+	emote_message_1p = "Вы сильно потеете."
+	emote_message_3p = "USER сильно потеет."
 
 /decl/emote/exertion/biological/check_user(mob/living/user)
 	if(istype(user) && !user.isSynthetic())
@@ -12,23 +12,23 @@
 
 /decl/emote/exertion/biological/breath
 	key = "ebreath"
-	emote_message_1p = "You feel out of breath."
-	emote_message_3p = "USER looks out of breath."
+	emote_message_1p = "Вы чувствуете, что запыхались."
+	emote_message_3p = "USER выглядит запыхавшимся."
 
 /decl/emote/exertion/biological/pant
 	key = "epant"
 	emote_range = 3
 	message_type = AUDIBLE_MESSAGE
-	emote_message_1p = "You pant to catch your breath."
-	emote_message_3p = "USER pants for air."
-	emote_message_impaired = "You can see USER breathing heavily."
+	emote_message_1p = "Вы тяжело дышите, чтобы перевести дыхание."
+	emote_message_3p = "USER тяжело глотает воздух."
+	emote_message_impaired = "Вы видите, как USER тяжело дышит."
 
 /decl/emote/exertion/synthetic
 	key = "ewhine"
 	emote_range = 3
 	message_type = AUDIBLE_MESSAGE
-	emote_message_1p = "You overstress your actuators."
-	emote_message_3p = "USER's actuators whine with strain."
+	emote_message_1p = "Вы перегружаете привода."
+	emote_message_3p = "USER's привода ноют от напряжения."
 
 /decl/emote/exertion/synthetic/check_user(mob/living/user)
 	if(istype(user) && user.isSynthetic())
@@ -37,5 +37,5 @@
 
 /decl/emote/exertion/synthetic/creak
 	key = "ecreak"
-	emote_message_1p = "Your chassis stress indicators spike."
-	emote_message_3p = "USER's joints creak with stress."
+	emote_message_1p = "Ваши индикаторы нагрузки на шасси скачут."
+	emote_message_3p = "Суставы USER's скрипят от напряжения."

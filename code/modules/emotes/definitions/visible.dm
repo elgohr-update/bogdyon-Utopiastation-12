@@ -210,7 +210,7 @@
 
 /decl/emote/visible/lightup
 	key = "light"
-	emote_message_3p = "USER lights up for a bit, then stops."
+	emote_message_3p = "USER мигает на секунду, затем прекращает."
 
 /decl/emote/visible/vibrate
 	key = "vibrate"
@@ -218,12 +218,12 @@
 
 /decl/emote/visible/deathgasp_robot
 	key = "deathgasp"
-	emote_message_3p = "USER shudders violently for a moment, then becomes motionless, USER_THEIR eyes slowly darkening."
+	emote_message_3p = "USER на мгновение сильно вздрагивает, затем становится неподвижным, USER_THEIR глаза медленно темнеют."
 
 /decl/emote/visible/handshake
 	key = "handshake"
 	check_restraints = TRUE
-	emote_message_3p_target = "USER shakes hands with TARGET."
+	emote_message_3p_target = "USER жмёт руку с TARGET."
 	emote_message_3p = "USER shakes hands with USER_SELF."
 	check_range = 1
 
@@ -234,8 +234,8 @@
 
 /decl/emote/visible/signal
 	key = "signal"
-	emote_message_3p_target = "USER signals at TARGET."
-	emote_message_3p = "USER signals."
+	emote_message_3p_target = "USER показывает на TARGET."
+	emote_message_3p = "USER показывает."
 	check_restraints = TRUE
 
 /decl/emote/visible/signal/check_user(atom/user)
@@ -245,7 +245,7 @@
 	if(istype(user) && !(user.r_hand && user.l_hand))
 		var/t1 = round(text2num(extra_params))
 		if(isnum(t1) && t1 <= 5)
-			return "USER raises [t1] finger\s."
+			return "USER поднимает [t1] палец/ы."
 	return .. ()
 
 /decl/emote/visible/afold

@@ -28,7 +28,7 @@
 
 /decl/emote/audible/gnarl
 	key ="gnarl"
-	emote_message_3p = "USER gnarls and shows its teeth.."
+	emote_message_3p = "USER кривится и показывает свои зубы.."
 
 /decl/emote/audible/chirp
 	key ="chirp"
@@ -193,7 +193,7 @@
 	key ="hiss_"
 	emote_message_3p_target = "USER hisses softly at TARGET."
 	emote_message_3p = "USER hisses softly."
-	
+
 /decl/emote/audible/lizard_bellow
 	key = "bellow"
 	emote_message_3p_target = "USER bellows deeply at TARGET!"
