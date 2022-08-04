@@ -80,7 +80,7 @@
 
 /decl/emote/audible/laugh
 	emote_sound = list(
-		MALE = list('infinity/sound/voice/laugh_male_1.ogg', 'infinity/sound/voice/laugh_male_2.ogg', 'infinity/sound/voice/laugh_male_3.ogg'),
+		MALE = list('infinity/sound/voice/laugh_male_1.ogg', 'infinity/sound/voice/laugh_male_2.ogg', 'infinity/sound/voice/laugh_male_3.ogg', 'infinity/sound/voice/laugh_male_4.ogg'),
 		FEMALE = list('infinity/sound/voice/laugh_female_1.ogg', 'infinity/sound/voice/laugh_female_2.ogg', 'infinity/sound/voice/laugh_female_3.ogg'))
 	sounded_species = SOUNDED_SPECIES
 
@@ -97,8 +97,8 @@
 /decl/emote/audible/scream
 	emote_sound = list(
 		MALE = list('infinity/sound/voice/scream_male_1.ogg', 'infinity/sound/voice/scream_male_2.ogg',
-					'infinity/sound/voice/scream_male_3.ogg'),
-		FEMALE = list('infinity/sound/voice/scream_female_1.ogg', 'infinity/sound/voice/scream_female_2.ogg'))
+					'infinity/sound/voice/scream_male_3.ogg', 'infinity/sound/voice/scream_male_4.ogg', 'infinity/sound/voice/scream_male_5.ogg', 'infinity/sound/voice/scream_male_6.ogg', 'infinity/sound/voice/scream_male_7.ogg'),
+		FEMALE = list('infinity/sound/voice/scream_female_1.ogg', 'infinity/sound/voice/scream_female_2.ogg', 'infinity/sound/voice/scream_female_3.ogg'))
 	sounded_species = SOUNDED_SPECIES
 
 /decl/emote/audible/scream/resomi

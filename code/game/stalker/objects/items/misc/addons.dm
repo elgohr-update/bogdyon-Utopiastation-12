@@ -8,13 +8,13 @@
 	desc = "A universal suppressor."
 	icon = 'ivent/obj/guns/projectile.dmi'
 	icon_state = "suppressor"
-	types = list(/obj/item/gun/projectile/pistol/next_day/pm,
-				/obj/item/gun/projectile/pistol/next_day/fort12,
-				/obj/item/gun/projectile/pistol/next_day/usp_match,
-				/obj/item/gun/projectile/next_day/ak74,
-				/obj/item/gun/projectile/next_day/aksu74,
-				/obj/item/gun/projectile/next_day/abakan)
-//				/obj/item/gun/projectile/next_day/kiparis
+	types = list(/obj/item/gun/projectile/pistol/stalker/pm,
+				/obj/item/gun/projectile/pistol/stalker/fort12,
+				/obj/item/gun/projectile/pistol/stalker/usp_match,
+				/obj/item/gun/projectile/stalker/ak74,
+				/obj/item/gun/projectile/stalker/aksu74,
+				/obj/item/gun/projectile/stalker/abakan)
+//				/obj/item/gun/projectile/stalker/kiparis
 	var/oldsound = null
 	var/initial_w_class = null
 
@@ -32,31 +32,31 @@
 //	eng_desc = "A 4x fixed zoom scope produced primarily in Western countries. Attached to weapons by means of the NATO-standard Picatinny rail. Often used for accurate fire from small arms at medium to long range."
 	icon = 'icons/stalker/weapon_mods.dmi'
 	icon_state = "susat"
-	types = list(///obj/item/gun/projectile/automatic/next_day/metro/saiga12,
+	types = list(///obj/item/gun/projectile/automatic/stalker/metro/saiga12,
 				)
 
 /obj/item/attachment/scope/PS
-	types = list(/obj/item/gun/projectile/next_day/aksu74,
-				 /obj/item/gun/projectile/next_day/ak74,
-				 /obj/item/gun/projectile/next_day/abakan)
+	types = list(/obj/item/gun/projectile/stalker/aksu74,
+				 /obj/item/gun/projectile/stalker/ak74,
+				 /obj/item/gun/projectile/stalker/abakan)
 
 
 /obj/item/attachment/scope/PS/U1
 	name = "PSU-1"
 	desc = "Оптический прицел фиксированной кратности (2,7 диоптрии). Оптимизирован для боя на средних дистанциях, а также для использования в условиях городской застройки. Для установки на оружие используется стандартное в странах Варшавского договора крепление типа «ласточкин хвост»."
 	icon_state = "PSU1"
-	types = list(/obj/item/gun/projectile/next_day/aksu74,
-				/obj/item/gun/projectile/next_day/ak74,
-				/obj/item/gun/projectile/next_day/abakan)
+	types = list(/obj/item/gun/projectile/stalker/aksu74,
+				/obj/item/gun/projectile/stalker/ak74,
+				/obj/item/gun/projectile/stalker/abakan)
 
 
 /obj/item/attachment/scope/PS/O1
 	name = "PSO-1"
 	desc = "Широко распространённый оптический прицел советского производства фиксированной кратности (5). Оснащён шкалой для определения дальности до цели. Для установки на оружие используется стандартное в странах Варшавского договора крепление типа «ласточкин хвост»."
 	icon_state = "PSO1"
-	types = list(/obj/item/gun/projectile/next_day/aksu74,
-				 /obj/item/gun/projectile/next_day/ak74,
-				 /obj/item/gun/projectile/next_day/abakan)
+	types = list(/obj/item/gun/projectile/stalker/aksu74,
+				 /obj/item/gun/projectile/stalker/ak74,
+				 /obj/item/gun/projectile/stalker/abakan)
 
 
 /obj/item/attachment/scope/rifle
@@ -64,14 +64,14 @@
 	desc = "WWII rifle scope"
 	icon_state = "rifle"
 	types = list(///obj/item/gun/projectile/shotgun/boltaction/enfield,
-				/obj/item/gun/projectile/next_day/sks)
+				/obj/item/gun/projectile/stalker/sks)
 
 
 /obj/item/attachment/scope/fnf2000
 	name = "FN-F2000 scope"
 	desc = "Прицел для винтовки FN-F2000."
 	icon_state = "fnf2000-scope"
-	types = list(/obj/item/gun/projectile/next_day/fnf2000)
+	types = list(/obj/item/gun/projectile/stalker/fnf2000)
 
 /obj/item/attachment/grenadelauncher
 	name = "grenade launcher"
