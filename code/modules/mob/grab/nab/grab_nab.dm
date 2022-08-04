@@ -7,7 +7,7 @@
 	if(!(. = ..()))
 		return
 	assailant.unEquip(assailant.get_inactive_hand())
-	visible_message("<span class='warning'>[assailant] has nabbed [affecting] passively!</span>")
+	visible_message("<span class='warning'>[assailant] пассивно хватает [affecting]!</span>")
 
 /datum/grab/nab
 
@@ -32,7 +32,7 @@
 
 	var/crush_damage = rand(8,14)
 
-	affecting.visible_message("<span class='danger'>[assailant] begins crushing [affecting]!</span>")
+	affecting.visible_message("<span class='danger'>[assailant] начинает дробить [affecting]!</span>")
 	G.attacking = 1
 	if(do_after(assailant, action_cooldown - 1, affecting))
 		G.attacking = 0
@@ -41,7 +41,7 @@
 		return 1
 	else
 		G.attacking = 0
-		affecting.visible_message("<span class='notice'>[assailant] stops crushing [affecting]!</span>")
+		affecting.visible_message("<span class='notice'>[assailant] прекращает дробить [affecting]!</span>")
 		return 0
 
 /datum/grab/nab/on_hit_harm(var/obj/item/grab/G)
@@ -50,7 +50,7 @@
 
 	var/masticate_damage = rand(15,20)
 
-	affecting.visible_message("<span class='danger'>[assailant] begins chewing on [affecting]!</span>")
+	affecting.visible_message("<span class='danger'>[assailant] начинает жевать [affecting]!</span>")
 	G.attacking = 1
 
 	if(do_after(assailant, action_cooldown - 1, affecting))
@@ -60,7 +60,7 @@
 		return 1
 	else
 		G.attacking = 0
-		affecting.visible_message("<span class='notice'>[assailant] stops chewing on [affecting].</span>")
+		affecting.visible_message("<span class='notice'>[assailant] прекращает жевать [affecting].</span>")
 		return 0
 
 // This causes the assailant to crush the affecting mob. There is a chance that the crush will cause the
@@ -68,19 +68,19 @@
 /datum/grab/nab/proc/crush(var/obj/item/grab/G, var/attack_damage)
 	var/obj/item/organ/external/damaging = G.get_targeted_organ()
 	var/hit_zone = G.target_zone
-	G.affecting.visible_message("<span class='danger'>[G.assailant] crushes [G.affecting]'s [damaging.name]!</span>")
+	G.affecting.visible_message("<span class='danger'>[G.assailant] давит [G.affecting] [damaging.name]!</span>")
 
 	if(prob(30))
 		var/hit_damage = max(attack_damage + 10, 15)
 		G.affecting.apply_damage(hit_damage, BRUTE, hit_zone, DAM_SHARP, used_weapon = "organic punctures")
 		var/armor = 100 * G.affecting.get_blocked_ratio(hit_zone, BRUTE, damage = hit_damage)
 		G.affecting.apply_effect(attack_damage, PAIN, armor)
-		G.affecting.visible_message("<span class='danger'>[G.assailant]'s spikes dig in painfully!</span>")
+		G.affecting.visible_message("<span class='danger'>Шипы вонзаются со всей силой в [G.assailant]!</span>")
 	else
 		G.affecting.apply_damage(attack_damage, BRUTE, hit_zone, used_weapon = "crushing")
 	playsound(get_turf(G.assailant), 'sound/weapons/bite.ogg', 25, 1, -1)
 
-	admin_attack_log(G.assailant, G.affecting, "Crushed their victim.", "Was crushed.", "crushed")
+	admin_attack_log(G.assailant, G.affecting, "Давит соперника.", "Был раздавлен.", "раздавленный")
 
 // This causes the assailant to chew on the affecting mob.
 /datum/grab/nab/proc/masticate(var/obj/item/grab/G, var/attack_damage)
@@ -91,4 +91,4 @@
 	G.affecting.visible_message("<span class='danger'>[G.assailant] chews on [G.affecting]'s [damaging.name]!</span>")
 	playsound(get_turf(G.assailant), 'sound/weapons/bite.ogg', 25, 1, -1)
 
-	admin_attack_log(G.assailant, G.affecting, "Chews their victim.", "Was chewed.", "chewed")
+	admin_attack_log(G.assailant, G.affecting, "Жуёт оппонента.", "Жевал.", "прожевал")

@@ -156,7 +156,7 @@
 	if(assailant.anchored || affecting.anchored)
 		return 0
 	if(assailant.get_active_hand())
-		to_chat(assailant, "<span class='notice'>You can't grab someone if your hand is full.</span>")
+		to_chat(assailant, "<span class='notice'>Вы не можете схватить кого-то, если Ваша рука занята.</span>")
 		return 0
 /*INF
 	if(assailant.grabbed_by.len)
@@ -165,11 +165,11 @@
 INF*/
 	var/obj/item/organ/organ = get_targeted_organ()
 	if(!istype(organ))
-		to_chat(assailant, "<span class='notice'>\The [affecting] is missing that body part!</span>")
+		to_chat(assailant, "<span class='notice'>У [affecting] нет этой части тела!</span>")
 		return 0
 	if(assailant == affecting)
 		if(!current_grab.can_grab_self)	//let's not nab ourselves
-			to_chat(assailant, "<span class='notice'>You can't grab yourself!</span>")
+			to_chat(assailant, "<span class='notice'>Вы не можете схватить себя!</span>")
 			return 0
 		var/list/bad_parts = assailant.hand ? list(BP_L_ARM, BP_L_HAND) :  list(BP_R_ARM, BP_R_HAND)
 		if(organ.organ_tag in bad_parts)
@@ -178,7 +178,7 @@ INF*/
 	for(var/obj/item/grab/G in affecting.grabbed_by)
 		if(G.assailant == assailant && G.target_zone == target_zone)
 			var/obj/O = G.get_targeted_organ()
-			to_chat(assailant, "<span class='notice'>You already grabbed [affecting]'s [O.name].</span>")
+			to_chat(assailant, "<span class='notice'>Вы уже схватили у [affecting] [O.name].</span>")
 			return 0
 	return 1
 
@@ -228,7 +228,7 @@ INF*/
 
 /obj/item/grab/proc/upgrade(var/bypass_cooldown = FALSE)
 	if(!check_upgrade_cooldown() && !bypass_cooldown)
-		to_chat(assailant, "<span class='danger'>It's too soon to upgrade.</span>")
+		to_chat(assailant, "<span class='danger'>Слишком рано.</span>")
 		return
 
 	var/datum/grab/upgrab = current_grab.upgrade(src)

@@ -18,15 +18,15 @@
 	break_chance_table = list(15, 60, 100)
 
 /datum/grab/normal/passive/on_hit_disarm(var/obj/item/grab/normal/G)
-	to_chat(G.assailant, "<span class='warning'>Your grip isn't strong enough to pin.</span>")
+	to_chat(G.assailant, "<span class='warning'>Ваш захват недостаточно крепкий.</span>")
 	return 0
 
 /datum/grab/normal/passive/on_hit_grab(var/obj/item/grab/normal/G)
-	to_chat(G.assailant, "<span class='warning'>Your grip isn't strong enough to jointlock.</span>")
+	to_chat(G.assailant, "<span class='warning'>Ваш захват недостаточно крепкий.</span>")
 	return 0
 
 /datum/grab/normal/passive/on_hit_harm(var/obj/item/grab/normal/G)
-	to_chat(G.assailant, "<span class='warning'>Your grip isn't strong enough to dislocate.</span>")
+	to_chat(G.assailant, "<span class='warning'>Ваш захват недостаточно крепкий.</span>")
 	return 0
 
 /datum/grab/normal/passive/resolve_openhand_attack(var/obj/item/grab/G)

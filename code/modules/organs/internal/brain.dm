@@ -49,7 +49,7 @@
 	if(species)
 		set_max_damage(species.total_health)
 	else
-		set_max_damage(200)
+		set_max_damage(250)
 
 	spawn(5)
 		if(brainmob && brainmob.client)
@@ -132,16 +132,16 @@
 /obj/item/organ/internal/brain/proc/handle_severe_brain_damage()
 	set waitfor = FALSE
 	healed_threshold = 0
-	to_chat(owner, "<span class = 'notice' font size='10'><B>Where am I...?</B></span>")
+	to_chat(owner, "<span class = 'notice' font size='10'><B>Где я?...</B></span>")
 	sleep(5 SECONDS)
 	if (!owner || owner.stat == DEAD || (status & ORGAN_DEAD))
 		return
-	to_chat(owner, "<span class = 'notice' font size='10'><B>What's going on...?</B></span>")
+	to_chat(owner, "<span class = 'notice' font size='10'><B>Что.. Что происходит?...</B></span>")
 	sleep(10 SECONDS)
 	if (!owner || owner.stat == DEAD || (status & ORGAN_DEAD))
 		return
-	to_chat(owner, "<span class = 'notice' font size='10'><B>What happened...?</B></span>")
-	alert(owner, "You have taken massive brain damage! You will not be able to remember the events leading up to your injury.", "Brain Damaged")
+	to_chat(owner, "<span class = 'notice' font size='10'><B>Что произошло?..</B></span>")
+	alert(owner, "Вы понесли серьёзную травму головного мозга, из-за чего ситуация, которая привела Вас в такое состояние, выпала из головы. Что произошло?", "Brain Damaged")
 	if (owner.psi)
 		owner.psi.check_latency_trigger(20, "physical trauma")
 
@@ -252,18 +252,18 @@
 	if(owner.stat)
 		return
 	if(damage > 0 && prob(1))
-		owner.custom_pain("Your head feels numb and painful.",10)
+		owner.custom_pain("Ваша голова немеет и очень болит.",10)
 	if(is_bruised() && prob(1) && owner.eye_blurry <= 0)
-		to_chat(owner, "<span class='warning'>It becomes hard to see for some reason.</span>")
+		to_chat(owner, "<span class='warning'>Становится тяжело держать глаза открытыми...</span>")
 		owner.eye_blurry = 10
 	if(damage >= 0.5*max_damage && prob(1) && owner.get_active_hand())
-		to_chat(owner, "<span class='danger'>Your hand won't respond properly, and you drop what you are holding!</span>")
+		to_chat(owner, "<span class='danger'>Ваша рука не может нормально реагировать, из-за чего Вы роняете предмет!</span>")
 		owner.unequip_item()
 	if(damage >= 0.6*max_damage)
 		owner.slurring = max(owner.slurring, 2)
 	if(is_broken())
 		if(!owner.lying)
-			to_chat(owner, "<span class='danger'>You black out!</span>")
+			to_chat(owner, "<span class='danger'>Вы слепните!</span>")
 		owner.Paralyse(10)
 
 /obj/item/organ/internal/brain/surgical_fix(mob/user)
