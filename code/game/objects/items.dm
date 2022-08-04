@@ -435,16 +435,22 @@ var/list/global/slot_flags_enumeration = list(
 			if(get_storage_cost() == ITEM_SIZE_NO_CONTAINER)
 				return 0 //pockets act like storage and should respect ITEM_SIZE_NO_CONTAINER. Suit storage might be fine as is
 		if(slot_s_store)
-			if(!H.wear_suit && (slot_wear_suit in mob_equip))
-				if(!disable_warning)
-					to_chat(H, "<span class='warning'>You need a suit before you can attach this [name].</span>")
-				return 0
-			if(!H.wear_suit.allowed)
-				if(!disable_warning)
-					to_chat(usr, "<span class='warning'>You somehow have a suit with no defined allowed items for suit storage, stop that.</span>")
-				return 0
-			if( !(istype(src, /obj/item/modular_computer/pda) || istype(src, /obj/item/pen) || is_type_in_list(src, H.wear_suit.allowed)) )
-				return 0
+			var/allow = FALSE
+			if(istype(src, /obj/item/gun))
+				var/obj/item/gun/G = src
+				if(G.bulk > GUN_BULK_REVOLVER)
+					allow = TRUE
+			if(!allow)
+				if(!H.wear_suit && (slot_wear_suit in mob_equip))
+					if(!disable_warning)
+						to_chat(H, "<span class='warning'>You need a suit before you can attach this [name].</span>")
+					return 0
+				if(!H.wear_suit.allowed)
+					if(!disable_warning)
+						to_chat(usr, "<span class='warning'>You somehow have a suit with no defined allowed items for suit storage, stop that.</span>")
+					return 0
+				if( !(istype(src, /obj/item/modular_computer/pda) || istype(src, /obj/item/pen) || is_type_in_list(src, H.wear_suit.allowed)) )
+					return 0
 		if(slot_handcuffed)
 			if(!istype(src, /obj/item/handcuffs))
 				return 0
