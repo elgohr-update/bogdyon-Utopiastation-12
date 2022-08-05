@@ -12,9 +12,9 @@
 
 /obj/anomaly
 	name = "Anomaly"
-	var/damage_amount = 0 				//Сколько дамажит
-	var/damage_type = DMG_TYPE_ENERGY	//Тип дамага
-	var/activated_icon_state = null 	//Спрайт при активации
+	var/damage_amount = 0 				//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	var/damage_type = DMG_TYPE_ENERGY	//пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	var/activated_icon_state = null 	//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	var/cooldown = 5
 	var/lasttime = 0
 	var/list/mob/living/trapped = new/list()
@@ -66,7 +66,7 @@
 
 		lasttime = world.time
 
-		playsound(src.loc, src.sound, 50, 1, channel = 0)
+		playsound(src.loc, src.sound, 50, 1, 0)
 		var/obj/item/I = A
 
 		AffectItem(I)
@@ -463,14 +463,14 @@
 	if(inactive_icon_state == "puh2")
 		active_icon_state = "puh2"
 
-/obj/rad 	//Не наносит урона
+/obj/rad 	//пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	name = "Anomaly"
 	icon = 'icons/stalker/anomalies.dmi'
 	icon_state = "rad_low"
-	var/damage_amount = 0 				//Сколько дамажит
-	var/damage_type = DMG_TYPE_RADIATION	//Тип дамага
-	var/activated_icon_state = null 	//Спрайт при активации
-	var/cooldown = 2.5					//Кулдаун
+	var/damage_amount = 0 				//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	var/damage_type = DMG_TYPE_RADIATION	//пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	var/activated_icon_state = null 	//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	var/cooldown = 2.5					//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	var/lasttime = 0
 	var/list/mob/living/carbon/human/trapped = new/list()
 	var/idle_luminosity = 0

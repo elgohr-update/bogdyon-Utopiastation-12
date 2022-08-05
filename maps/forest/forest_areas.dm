@@ -12,6 +12,10 @@
 	sound_env = SMALL_ENCLOSED
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
+/area/forest/empty
+	name = "\empty"
+	icon_state = null
+
 /area/forest/survivors_cave/med
 	name = "\improper Survivors Cave Medical"
 	icon_state = "bridge"
