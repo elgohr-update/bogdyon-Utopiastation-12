@@ -145,18 +145,18 @@ obj/item/organ/internal/take_general_damage(var/amount, var/silent = FALSE)
 
 /obj/item/organ/internal/proc/get_visible_state()
 	if(damage > max_damage)
-		. = "bits and pieces of a destroyed "
+		. = "Уничтоженное и сгнившее "
 	else if(is_broken())
-		. = "broken "
+		. = "сломанные "
 	else if(is_bruised())
-		. = "badly damaged "
+		. = "повреждённые "
 	else if(damage > 5)
-		. = "damaged "
+		. = "сильно повреждённые "
 	if(status & ORGAN_DEAD)
 		if(can_recover())
-			. = "decaying [.]"
+			. = "разлагающиеся [.]"
 		else
-			. = "necrotic [.]"
+			. = "сгнивший [.]"
 	. = "[.][name]"
 
 /obj/item/organ/internal/Process()

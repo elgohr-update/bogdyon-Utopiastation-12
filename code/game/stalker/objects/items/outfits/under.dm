@@ -1,11 +1,8 @@
 /obj/item/clothing/under/color/switer
 	name = "sweater"
-	desc = "Гр&#255;зный и поношенный старый бабушкин свитер из натуральной собачьей шерсти, обладающий естественными лечебными свойствами. Этот свитер очень тёплый и удобный."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "РўС‘РїР»С‹Р№ СЃРІРёС‚РµСЂ СЃ РЅРµ РјРµРЅРµРµ СѓС‚РµРїР»С‘РЅРЅС‹РјРё РґР¶РёРЅСЃР°РјРё. РҐРѕСЂРѕС€Рѕ СЃРѕС‡РµС‚Р°РµС‚СЃСЏ СЃ РєРѕР¶Р°РЅРѕР№ РєСѓСЂС‚РєРѕР№."
 	icon_state = "switer"
 	item_state = "g_suit"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/color/switer/dark
@@ -13,124 +10,84 @@
 
 /obj/item/clothing/under/color/sidor
 	name = "old suit"
-	desc = "Someone who wears this means business."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "РљРѕСЃС‚СЋРј СЃ Р·Р°Р»СЏРїР°РЅРЅРѕР№ Р¶РёСЂРѕРј СЂСѓР±Р°С€РєРѕР№. Р•РіРѕ СЏРІРЅРѕ РёР·РЅРѕСЃРёР»Рё."
 	icon_state = "sidor"
 	item_state = "g_suit"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/color/sidor/fat
 	name = "old suit"
-	desc = "Someone who wears this means business."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "РљРѕСЃС‚СЋРј СЃ Р·Р°Р»СЏРїР°РЅРЅРѕР№ Р¶РёСЂРѕРј СЂСѓР±Р°С€РєРѕР№. Р•РіРѕ СЏРІРЅРѕ РёР·РЅРѕСЃРёР»Рё, РґР° Рё СЂР°Р·РјРµСЂС‡РёРє Р±РѕР»СЊС€РµРІР°С‚."
 	icon_state = "sidor_fat"
 	item_state = "g_suit"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/color/switer/lolg
 	name = "telnashka"
-	desc = "Тепла&#255; майка-тельн&#255;ха и черные поношенные штаны - стандартна&#255; одежда всех долговцев и военных."
+	desc = "РўРµР»СЊРЅСЏС€РєР°. РўР°РєРёРµ РѕР±С‹С‡РЅРѕ РёСЃРїРѕР»СЊР·СѓСЋС‚ РјРѕСЂСЏРєРё С„Р»РѕС‚Р° Р¦РџРЎРЎ. Р СЂСѓСЃСЃРєРёРµ."
 	icon_state = "lolg"
 	item_state = "lolg"
 
 /obj/item/clothing/under/color/switer/tracksuit
 	name = "tracksuit"
-	desc = "Такой спортивный костюм обычно можно увидеть на пацанах с района."
-	eng_desc = "Usually you see this tracksuit being worn by gopniks."
+	desc = "РЎРїРѕСЂС‚РёРІРЅС‹Р№ РєРѕСЃС‚СЋРј. Р Р°СЂРёС‚РµС‚ РІ РєРѕСЃРјРёС‡РµСЃРєРѕРј РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ."
+//	eng_desc = "Usually you see this tracksuit being worn by gopniks."
 	icon_state = "tracksuit"
 	item_state = "tracksuit"
 
 /obj/item/clothing/under/metro/bandits_uniform
 	name = "bandits uniform"
-	desc = "Сшитый на скорую руку стильный чёрный костюм с бандитской меткой на спине. Такой обычно носят братки с дальних станций."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р‘Р°РЅРґРёС‚СЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. Р’ С‚Р°РєРѕР№ Р»СѓС‡С€Рµ РЅРµ СЂР°Р·РіСѓР»РёРІР°С‚СЊ РІРЅРµ СЃРІРѕРµРіРѕ СЂР°Р№РѕРЅР°."
 	icon_state = "bandit"
 	item_state = "bandit"
-	can_adjust = 0
 	has_sensor = 0
 
 
 /obj/item/clothing/under/gorka
     name = "Gorka"
-    desc = "Довольно тактически выгл&#255;д&#255;щий костюм, учитыва&#255;, где вы находитесь - раритет. На воротнике видно, кажетс&#255;, бирку: 'Швейники и К'. ."
-    body_parts_covered = CHEST|ARMS|LEGS
-    cold_protection = CHEST|ARMS|LEGS
+    desc = "РЈРґРѕР±РЅР°СЏ Рё РІР»Р°РіРѕСЃРґРµСЂР¶РёРІР°СЋС‰Р°СЏ РіРѕСЂРєР° СЃРїРѕСЃРѕР±РЅР° Р·Р°С‰РёС‚РёС‚СЊ РІР»Р°РґРµР»СЊС†Р° РІ Р»СЋР±СѓСЋ РЅРµРїРѕРіРѕРґСѓ. РўРѕР»СЊРєРѕ РІРѕС‚ РїСѓР»Рё РѕРЅР° РЅРµ РґРµСЂР¶РёС‚."
     icon_state = "gorka"
     item_state = "gorka"
-    can_adjust = 0
     has_sensor = 0
 
 /obj/item/clothing/under/metro/civilian_fatigues
 	name = "civilian clothes"
-	desc = "Простой, гражданский костюм, без особой истории, или интересных особенностей."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р“СЂР°Р¶РґР°РЅСЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. РЈРґРѕР±РЅРѕ, РїСЂР°РєС‚РёС‡РЅРѕ, СЃРѕ РІРєСѓСЃРѕРј."
 	icon_state = "shiny"
 	item_state = "shiny"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/metro/civilian_fatigues2
 	name = "civilian clothes"
-	desc = "Простой, гражданский костюм, без особой истории, или интересных особенностей."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р“СЂР°Р¶РґР°РЅСЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. РЈРґРѕР±РЅРѕ, РїСЂР°РєС‚РёС‡РЅРѕ, СЃРѕ РІРєСѓСЃРѕРј."
 	icon_state = "ranger"
 	item_state = "ranger"
-	can_adjust = 0
-	has_sensor = 0
-
-/obj/item/clothing/under/metro/rsa_uniform
-	name = "trc clothes"
-	desc = "Камуфл&#255;жный костюм, не очень вписывающийс&#255; в окружение, но зато - выдел&#255;ющий вас на фоне остальных. Такой, обычно, нос&#255;т бойцы КР."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
-	icon_state = "camogreen"
-	item_state = "camogreen"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/metro/civilian_fatigues3
 	name = "civilian clothes"
-	desc = "Простой, гражданский костюм, без особой истории, или интересных особенностей."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р“СЂР°Р¶РґР°РЅСЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. РЈРґРѕР±РЅРѕ, РїСЂР°РєС‚РёС‡РЅРѕ, СЃРѕ РІРєСѓСЃРѕРј."
 	icon_state = "civilian"
 	item_state = "civilian"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/metro/civilian_fatigues4
 	name = "civilian clothes"
-	desc = "Простой, гражданский костюм, без особой истории, или интересных особенностей."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р“СЂР°Р¶РґР°РЅСЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. РЈРґРѕР±РЅРѕ, РїСЂР°РєС‚РёС‡РЅРѕ, СЃРѕ РІРєСѓСЃРѕРј."
 	icon_state = "explorer"
 	item_state = "explorer"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/metro/civilian_fatigues5
 	name = "civilian clothes"
-	desc = "Простой, гражданский костюм, без особой истории, или интересных особенностей."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р“СЂР°Р¶РґР°РЅСЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. РЈРґРѕР±РЅРѕ, РїСЂР°РєС‚РёС‡РЅРѕ, СЃРѕ РІРєСѓСЃРѕРј."
 	icon_state = "oliveoutfit"
 	item_state = "oliveoutfit"
-	can_adjust = 0
 	has_sensor = 0
 
 /obj/item/clothing/under/metro/civilian_fatigues6
 	name = "civilian clothes"
-	desc = "Простой, гражданский костюм, без особой истории, или интересных особенностей."
-	body_parts_covered = CHEST|ARMS|LEGS
-	cold_protection = CHEST|ARMS|LEGS
+	desc = "Р“СЂР°Р¶РґР°РЅСЃРєР°СЏ СѓРЅРёС„РѕСЂРјР°. РЈРґРѕР±РЅРѕ, РїСЂР°РєС‚РёС‡РЅРѕ, СЃРѕ РІРєСѓСЃРѕРј."
 	icon_state = "genericclothing2"
 	item_state = "genericclothing2"
-	can_adjust = 0
 	has_sensor = 0

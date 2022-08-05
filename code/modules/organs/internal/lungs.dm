@@ -6,8 +6,8 @@
 	parent_organ = BP_CHEST
 	w_class = ITEM_SIZE_NORMAL
 	min_bruised_damage = 25
-	min_broken_damage = 45
-	max_damage = 70
+	min_broken_damage = 55
+	max_damage = 75
 	relative_size = 60
 
 	var/active_breathing = 1
@@ -19,7 +19,7 @@
 	var/min_breath_pressure
 	var/last_int_pressure
 	var/last_ext_pressure
-	var/max_pressure_diff = 60
+	var/max_pressure_diff = 64
 
 	var/oxygen_deprivation = 0
 	var/safe_exhaled_max = 6
@@ -167,7 +167,7 @@
 			if(inhale_efficiency < 0.8)
 				owner.emote("gasp")
 			else if(prob(20))
-				to_chat(owner, SPAN_WARNING("It's hard to breathe..."))
+				to_chat(owner, SPAN_WARNING("Тяжело дышать..."))
 		breath_fail_ratio = 1 - inhale_efficiency
 		failed_inhale = 1
 	else
@@ -230,9 +230,9 @@
 	if(prob(15) && !owner.nervous_system_failure())
 		if(!owner.is_asystole())
 			if(active_breathing)
-				owner.emote("gasp")
+				owner.emote("хватает воздух")
 		else
-			owner.emote(pick("shiver","twitch"))
+			owner.emote(pick("дрожит","дёргается"))
 
 	if(damage || owner.chem_effects[CE_BREATHLOSS] || world.time > last_successful_breath + 2 MINUTES)
 		owner.adjustOxyLoss(HUMAN_MAX_OXYLOSS*breath_fail_ratio)
