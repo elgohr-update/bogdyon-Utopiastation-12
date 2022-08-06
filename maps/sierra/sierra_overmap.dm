@@ -68,6 +68,16 @@
 	vessel_size = SHIP_SIZE_TINY
 	skill_needed = SKILL_BASIC //was trained
 
+/obj/effect/overmap/visitable/ship/landable/rask
+	name = "Rask"
+	shuttle = "Rask"
+	max_speed = 1/(4 SECONDS) //was 1/(10 SECONDS)
+	burn_delay = 0.5 SECONDS //was 2 SECONDS, just try to not burn all the fuel
+	vessel_mass = 300 //was 2200, yes, it's 500 tonnes
+	fore_dir = WEST
+	vessel_size = SHIP_SIZE_TINY
+	skill_needed = SKILL_BASIC //was trained
+
 /obj/machinery/computer/shuttle_control/explore/exploration_shuttle
 	name = "charon control console"
 	shuttle_tag = "Charon"
@@ -77,3 +87,8 @@
 	name = "guppy control console"
 	shuttle_tag = "Guppy"
 	req_access = list(access_guppy_helm)
+
+/obj/machinery/computer/shuttle_control/explore/rask
+	name = "rask control console"
+	shuttle_tag = "Rask"
+	req_access = newlist()
