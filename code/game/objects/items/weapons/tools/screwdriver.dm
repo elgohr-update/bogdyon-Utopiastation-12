@@ -6,12 +6,12 @@
 	item_state = "screwdriver"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT | SLOT_EARS
-	force = 4.0
+	force = 9
 	w_class = ITEM_SIZE_TINY
-	throwforce = 5.0
+	throwforce = 7
 	throw_speed = 3
-	throw_range = 5
-	matter = list(MATERIAL_STEEL = 75)
+	throw_range = 6
+	matter = list(MATERIAL_STEEL = 150)
 	center_of_mass = "x=16;y=7"
 	attack_verb = list("stabbed")
 	lock_picking_level = 5

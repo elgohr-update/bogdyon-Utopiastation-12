@@ -34,7 +34,7 @@
 	desc = "A simple table knife, used to cut up individual portions of food."
 	icon_state = "table"
 	default_material = MATERIAL_ALUMINIUM
-	max_force = 7
+	max_force = 13
 	force_multiplier = 0.1
 	sharp = FALSE
 	attack_verb = list("prodded")
@@ -64,7 +64,7 @@
 	desc = "A heavy blade used to process food, especially animal carcasses."
 	icon_state = "butch"
 	armor_penetration = 5
-	force_multiplier = 0.18
+	force_multiplier = 0.24
 	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 
 /obj/item/material/knife/kitchen/cleaver/bronze
@@ -78,7 +78,7 @@
 	name = "combat knife"
 	desc = "A blade with a saw-like pattern on the reverse edge and a heavy handle."
 	icon_state = "tacknife"
-	force_multiplier = 0.2
+	force_multiplier = 0.4
 	w_class = ITEM_SIZE_SMALL
 
 //random stuff

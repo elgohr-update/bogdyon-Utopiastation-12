@@ -3,7 +3,7 @@
 	desc = "A miniature excavation tool for precise digging."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	item_state = "screwdriver_brown"
-	force = 3
+	force = 9
 	throwforce = 0
 	attack_verb = list("stabbed", "jabbed", "spiked", "attacked")
 	matter = list(MATERIAL_STEEL = 75)

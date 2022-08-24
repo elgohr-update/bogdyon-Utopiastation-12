@@ -5,15 +5,15 @@
 	icon_state = "crowbar"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 15
-	attack_cooldown = 2*DEFAULT_WEAPON_COOLDOWN
+	force = 25
+	attack_cooldown = 2.3*DEFAULT_WEAPON_COOLDOWN
 	melee_accuracy_bonus = -10
-	throwforce = 7
-	throw_range = 3
+	throwforce = 14
+	throw_range = 5
 	item_state = "crowbar"
 	w_class = ITEM_SIZE_NORMAL
 	origin_tech = list(TECH_ENGINEERING = 1)
-	matter = list(MATERIAL_STEEL = 140)
+	matter = list(MATERIAL_STEEL = 660)
 	center_of_mass = "x=16;y=20"
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
 
@@ -26,11 +26,11 @@
 	desc = "A steel bar with a wedge. It comes in a variety of configurations and colours - collect them all."
 	icon_state = "prybar_preview"
 	item_state = "crowbar"
-	force = 4
-	throwforce = 6
-	throw_range = 5
+	force = 13
+	throwforce = 9
+	throw_range = 8
 	w_class = ITEM_SIZE_SMALL
-	matter = list(MATERIAL_STEEL = 80)
+	matter = list(MATERIAL_STEEL = 440)
 
 	var/prybar_types = list("1","2","3","4","5")
 	var/valid_colours = list(COLOR_RED_GRAY, COLOR_BLUE_GRAY, COLOR_BOTTLE_GREEN, COLOR_MAROON, COLOR_DARK_BROWN, COLOR_VIOLET, COLOR_GRAY20)
@@ -47,18 +47,18 @@
 	desc = "This is an emergency forcing tool, made of steel bar with a wedge on one end, and a hatchet on the other end. It has a blue plastic grip."
 	icon_state = "emergency_forcing_tool"
 	item_state = "emergency_forcing_tool"
-	force = 12
+	force = 29
 	sharp = TRUE
 	edge = TRUE
-	throwforce = 6
-	throw_range = 5
+	throwforce = 19
+	throw_range = 3
 	w_class = ITEM_SIZE_NORMAL
-	matter = list(MATERIAL_STEEL = 150)
+	matter = list(MATERIAL_STEEL = 990)
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked", "attacked", "slashed", "torn", "ripped", "cut")
 
 /obj/item/crowbar/emergency_forcing_tool/resolve_attackby(atom/A)//extra dmg against glass, it's an emergency forcing tool, it's gotta be good at something
 	if(istype(A, /obj/structure/window))
-		force = initial(force) * 2
+		force = initial(force) * 2.5
 	else
 		force = initial(force)
 	. = ..()

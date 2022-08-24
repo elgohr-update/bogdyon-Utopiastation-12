@@ -6,15 +6,15 @@
 	item_state = "claymore"
 	slot_flags = SLOT_BELT
 	w_class = ITEM_SIZE_LARGE
-	force_multiplier = 0.5 // 30 when wielded with hardnes 60 (steel)
-	armor_penetration = 10
-	thrown_force_multiplier = 0.5 // 10 when thrown with weight 20 (steel)
+	force_multiplier = 0.7
+	armor_penetration = 15
+	thrown_force_multiplier = 0.7 //
 	sharp = TRUE
 	edge = TRUE
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	base_parry_chance = 50
-	melee_accuracy_bonus = 10
+	melee_accuracy_bonus = 15
 	worth_multiplier = 30
 
 /obj/item/material/sword/replica

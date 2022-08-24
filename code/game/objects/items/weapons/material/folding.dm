@@ -7,7 +7,7 @@
 	icon_state = "knife_preview"
 	item_state = null
 	force = 0.2 //force of folded obj
-	max_force = 10
+	max_force = 16
 	force_multiplier = 0.2
 	applies_material_colour = FALSE
 	applies_material_name = FALSE

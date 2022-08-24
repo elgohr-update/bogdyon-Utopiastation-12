@@ -7,8 +7,8 @@
 	icon_state = "stunbaton"
 	item_state = "baton"
 	slot_flags = SLOT_BELT
-	force = 15
-	throwforce = 7
+	force = 20
+	throwforce = 9
 	w_class = ITEM_SIZE_NORMAL
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten")
@@ -263,7 +263,7 @@
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "stunprod_nocell"
 	item_state = "prod"
-	force = 3
+	force = 13
 	throwforce = 5
 	stunforce = 0
 	agonyforce = 60	//same force as a stunbaton, but uses way more charge.

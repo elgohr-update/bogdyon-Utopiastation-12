@@ -14,7 +14,7 @@
 	icon_state = "baton"
 	item_state = "classic_baton"
 	slot_flags = SLOT_BELT
-	force = 10
+	force = 17
 
 /obj/item/melee/classic_baton/attack(mob/M as mob, mob/living/user as mob)
 	if ((MUTATION_CLUMSY in user.mutations) && prob(50))
@@ -37,7 +37,7 @@
 	item_state = "telebaton_0"
 	slot_flags = SLOT_BELT
 	w_class = ITEM_SIZE_SMALL
-	force = 3
+	force = 9
 	var/on = 0
 
 
@@ -48,7 +48,7 @@
 		"<span class='warning'>You extend the baton.</span>",\
 		"You hear an ominous click.")
 		w_class = ITEM_SIZE_NORMAL
-		force = 15//quite robust
+		force = 18//quite robust
 		attack_verb = list("smacked", "struck", "slapped")
 	else
 		user.visible_message("<span class='notice'>\The [user] collapses their telescopic baton.</span>",\

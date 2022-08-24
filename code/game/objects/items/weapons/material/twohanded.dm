@@ -74,8 +74,8 @@
 	name = "fire axe"
 	desc = "Truly, the weapon of a madman. Who would think to fight fire with an axe?"
 
-	max_force = 60	//for wielded
-	force_multiplier = 0.6
+	max_force = 75	//for wielded
+	force_multiplier = 0.8
 	unwielded_force_divisor = 0.3
 	attack_cooldown_modifier = 6
 	sharp = TRUE
@@ -107,9 +107,9 @@
 	base_icon = "spearglass"
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
-	max_force = 20	//for wielded
+	max_force = 40	//for wielded
 	applies_material_colour = 0
-	force_multiplier = 0.33 // 12/19 with hardness 60 (steel) or 10/16 with hardness 50 (glass)
+	force_multiplier = 0.44 // 12/19 with hardness 60 (steel) or 10/16 with hardness 50 (glass)
 	unwielded_force_divisor = 0.20
 	thrown_force_multiplier = 1.5 // 20 when thrown with weight 15 (glass)
 	throw_speed = 3
