@@ -7,6 +7,7 @@
 	#include "forest_jobs_override.dm"
 	#include "forest_setup.dm"
     #include "forest_lobby.dm"
+    #include "forest_misc.dm"
 
 	#include "loadout/_defines.dm"
 	#include "loadout/loadout.dm"

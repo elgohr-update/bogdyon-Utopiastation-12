@@ -2,6 +2,10 @@
 // Structures
 //////////////////////////////////////////////////////
 
+/obj/machinery/computer/shuttle_control/explore/rask
+	name = "Rask console"
+	shuttle_tag = "rask"
+
 /obj/structure/flora/tree/pine/dense
 	alpha = 170
 	opacity = TRUE
