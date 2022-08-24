@@ -12,10 +12,6 @@
 	sound_env = SMALL_ENCLOSED
 	area_flags = AREA_FLAG_RAD_SHIELDED
 
-/area/forest/empty
-	name = "\empty"
-	icon_state = null
-
 /area/forest/survivors_cave/med
 	name = "\improper Survivors Cave Medical"
 	icon_state = "bridge"
@@ -30,7 +26,7 @@
 	req_access = list(access_mailsorting, access_cargo)
 
 /area/forest/survivors_cave/comendant
-	name = "\improper Survivors Cave Comendant"
+	name = "\improper Survivors Cave COM"
 	icon_state = "med"
 	sound_env = SMALL_ENCLOSED
 	area_flags = AREA_FLAG_RAD_SHIELDED
@@ -111,7 +107,6 @@
 	icon_state = "hallP"
 	base_turf = /turf/simulated/floor/exoplanet/water/shallow
 
-
 /area/forest/coms
 	name = "\improper connect"
 	icon_state = "engine"
@@ -127,6 +122,10 @@
 /area/forest/downground2
 	name = "\improper research"
 	icon_state = "medbay"
+
+/area/forest/empty
+	name = "empty"
+	icon_state = "none"
 
 
 /area/forest/Nexus

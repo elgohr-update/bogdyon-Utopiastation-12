@@ -234,16 +234,16 @@
 			grasp_name = hand.name
 
 		if(affected.can_feel_pain())
-			var/emote_scream = pick("screams in pain", "lets out a sharp cry", "cries out")
-			var/emote_scream_alt = pick("scream in pain", "let out a sharp cry", "cry out")
+			var/emote_scream = pick("кричит от боли", "резко вскрикивает от боли", "выпускает слёзы")
+			var/emote_scream_alt = pick("кричит от боли", "резко кричит от боли", "плачет")
 			visible_message(
-				"<B>\The [src]</B> [emote_scream] and drops what they were holding in their [grasp_name]!",
+				"<B>[src] [emote_scream], роняя то, что держит в [grasp_name]!",
 				null,
-				"You hear someone [emote_scream_alt]!"
+				"Вы слышите как кто-то [emote_scream_alt]!"
 			)
-			custom_pain("The sharp pain in your [affected.name] forces you to drop [thing]!", 30)
+			custom_pain("Резкая боль в [affected.name] принуждает бросить [thing]!", 30)
 		else
-			visible_message("<B>\The [src]</B> drops what they were holding in their [grasp_name]!")
+			visible_message("<B>[src] бросает то, что держит в [grasp_name]!")
 
 /mob/living/carbon/human/proc/sync_organ_dna()
 	var/list/all_bits = internal_organs|organs

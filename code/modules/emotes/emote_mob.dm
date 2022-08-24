@@ -18,7 +18,7 @@
 			return
 
 		if(!can_emote(m_type))
-			to_chat(src, "<span class='warning'>You cannot currently [m_type == AUDIBLE_MESSAGE ? "audibly" : "visually"] emote!</span>")
+			to_chat(src, "<span class='warning'>НЕЛЬЗЯ ЭМОУТИТЬ СЕЙЧАС.</span>")
 			return
 
 		if(act == "me")
@@ -51,7 +51,7 @@
 		return
 
 	if(use_emote.message_type == AUDIBLE_MESSAGE && is_muzzled())
-		audible_message("<b>\The [src]</b> makes a muffled sound.")
+		audible_message("<b>[src]</b> мычит.")
 		return
 	else
 		use_emote.do_emote(src, message)
@@ -121,7 +121,7 @@
 /mob/proc/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message = null)
 
 	if((usr && stat) || (!use_me && usr == src))
-		to_chat(src, "You are unable to emote.")
+		to_chat(src, "НЕЛЬЗЯ ЭМОУТИТЬ.")
 		return
 
 	var/input

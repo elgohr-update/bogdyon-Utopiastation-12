@@ -26,7 +26,7 @@
 		if(H.hand)
 			temp = H.organs_by_name[BP_L_HAND]
 		if(!temp || !temp.is_usable())
-			to_chat(H, "<span class='warning'>You can't use your hand.</span>")
+			to_chat(H, "<span class='warning'>Вы не можете использовать свою руку.</span>")
 			return
 
 	..()
@@ -46,7 +46,7 @@
 //[/INF]
 			if(!damage)
 				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-				visible_message("<span class='danger'>\The [H] has attempted to punch \the [src]!</span>")
+				visible_message("<span class='danger'>\The [H] попытался ударить [src]!</span>")
 				return 0
 			var/obj/item/organ/external/affecting = get_organ(ran_zone(H.zone_sel.selecting))
 
@@ -58,7 +58,7 @@
 			update_personal_goal(/datum/goal/achievement/fistfight, TRUE)
 			H.update_personal_goal(/datum/goal/achievement/fistfight, TRUE)
 
-			visible_message("<span class='danger'>[H] has punched \the [src]!</span>")
+			visible_message("<span class='danger'>[H] ударил [src]!</span>")
 
 			apply_damage(damage, PAIN, affecting)
 //[INF]
@@ -110,14 +110,14 @@
 				var/cpr_delay = 15 * M.skill_delay_mult(SKILL_ANATOMY, 0.2)
 				cpr_time = 0
 
-				H.visible_message("<span class='notice'>\The [H] is trying to perform CPR on \the [src].</span>")
+				H.visible_message("<span class='notice'>[H] проводит СЛР [src].</span>")
 
 				if(!do_after(H, cpr_delay, src))
 					cpr_time = 1
 					return
 				cpr_time = 1
 
-				H.visible_message("<span class='notice'>\The [H] performs CPR on \the [src]!</span>")
+				H.visible_message("<span class='notice'>[H] проводит СЛР [src]!</span>")
 
 				if(is_asystole())
 					if(prob(5 + 5 * (SKILL_EXPERT - pumping_skill)))
@@ -134,19 +134,19 @@
 						resuscitate()
 
 				if(!H.check_has_mouth())
-					to_chat(H, "<span class='warning'>You don't have a mouth, you cannot do mouth-to-mouth resuscitation!</span>")
+					to_chat(H, "<span class='warning'>У Вас нет рта, нельзя делать сердечно-лёгочную реанимацию!</span>")
 					return
 				if(!check_has_mouth())
-					to_chat(H, "<span class='warning'>They don't have a mouth, you cannot do mouth-to-mouth resuscitation!</span>")
+					to_chat(H, "<span class='warning'>У них нет рта, они не могут делать сердечно-лёгочную реанимацию!</span>")
 					return
 				if((H.head && (H.head.body_parts_covered & FACE)) || (H.wear_mask && (H.wear_mask.body_parts_covered & FACE)))
-					to_chat(H, "<span class='warning'>You need to remove your mouth covering for mouth-to-mouth resuscitation!</span>")
+					to_chat(H, "<span class='warning'>Сначала нужно убрать то, что закрывает Ваш рот, прежде чем делать СЛР!</span>")
 					return 0
 				if((head && (head.body_parts_covered & FACE)) || (wear_mask && (wear_mask.body_parts_covered & FACE)))
-					to_chat(H, "<span class='warning'>You need to remove \the [src]'s mouth covering for mouth-to-mouth resuscitation!</span>")
+					to_chat(H, "<span class='warning'>Вам надо убрать у [src] то, что закрывает рот, прежде чем делать СЛР!</span>")
 					return 0
 				if (!H.internal_organs_by_name[H.species.breathing_organ])
-					to_chat(H, "<span class='danger'>You need lungs for mouth-to-mouth resuscitation!</span>")
+					to_chat(H, "<span class='danger'>Вам нужны лёгкие для СЛР!</span>")
 					return
 				if(!need_breathe())
 					return
@@ -157,7 +157,7 @@
 					if(!fail)
 						if (!L.is_bruised())
 							losebreath = 0
-						to_chat(src, "<span class='notice'>You feel a breath of fresh air enter your lungs. It feels good.</span>")
+						to_chat(src, "<span class='notice'>Вы чувствуете, как свежий воздух наполняет лёгкие. Освежает.</span>")
 
 			else if(!(M == src && apply_pressure(M, M.zone_sel.selecting)))
 				help_shake_act(M)
@@ -189,13 +189,13 @@
 			if(!attack)
 				return 0
 			if(world.time < H.last_attack + attack.delay)
-				to_chat(H, "<span class='notice'>You can't attack again so soon.</span>")
+				to_chat(H, "<span class='notice'>Вы не можете атаковать так быстро.</span>")
 				return 0
 			else
 				H.last_attack = world.time
 
 			if(!affecting || affecting.is_stump())
-				to_chat(M, "<span class='danger'>They are missing that limb!</span>")
+				to_chat(M, "<span class='danger'>У них нет этой части тела!</span>")
 				return 1
 
 			switch(src.a_intent)

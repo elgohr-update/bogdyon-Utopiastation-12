@@ -68,6 +68,7 @@ return;\
 #define SS_INIT_AIFAST          -22
 #define SS_INIT_CHAT            -90 // Should be lower to ensure chat remains smooth during init.
 #define SS_INIT_UNIT_TESTS      -100
+#define INIT_ORDER_PLANETS		-250
 
 // SS runlevels
 

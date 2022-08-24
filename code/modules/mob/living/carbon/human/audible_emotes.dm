@@ -9,9 +9,9 @@
 		if(!is_muzzled())
 			switch(gender)
 				if(MALE)
-					scream_sound = pick('infinity/sound/voice/pain_male_1.ogg','infinity/sound/voice/pain_male_2.ogg','infinity/sound/voice/pain_male_3.ogg')
+					scream_sound = pick('infinity/sound/voice/pain_male_1.ogg','infinity/sound/voice/pain_male_2.ogg','infinity/sound/voice/pain_male_3.ogg','infinity/sound/voice/scream_male_3.ogg','infinity/sound/voice/scream_male_4.ogg','infinity/sound/voice/scream_male_5.ogg')
 				if(FEMALE)
-					scream_sound = pick('infinity/sound/voice/agony_female_1.ogg','infinity/sound/voice/agony_female_1.ogg','infinity/sound/voice/agony_female_1.ogg')
+					scream_sound = pick('infinity/sound/voice/agony_female_1.ogg','infinity/sound/voice/agony_female_2.ogg','infinity/sound/voice/agony_female_3.ogg','infinity/sound/voice/agony_female_4.ogg','infinity/sound/voice/agony_female_5.ogg')
 			message = "кричит от боли!"
 		else
 			message = "издает громкое мычание!"
@@ -35,7 +35,7 @@
 		var/mob/living/carbon/human/H = src
 		if(!is_muzzled())
 			switch(gender)
-				if(MALE) moan_sound = pick('infinity/sound/voice/moan_male_1.ogg','infinity/sound/voice/moan_male_2.ogg','infinity/sound/voice/moan_male_3.ogg')
+				if(MALE) moan_sound = pick('infinity/sound/voice/moan_male_1.ogg','infinity/sound/voice/moan_male_2.ogg','infinity/sound/voice/moan_male_3.ogg','infinity/sound/voice/scream_male_1.ogg','infinity/sound/voice/scream_male_2.ogg')
 				if(FEMALE) moan_sound = pick('infinity/sound/voice/moan_female_1.ogg','infinity/sound/voice/moan_female_2.ogg','infinity/sound/voice/moan_female_3.ogg')
 			message = "стонет от боли!"
 		else

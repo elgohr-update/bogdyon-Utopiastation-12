@@ -165,13 +165,13 @@
 			if(E.species) //Check to make sure we have a species
 				msg += E.species.disfigure_msg(src)
 			else //Just in case they lack a species for whatever reason.
-				msg += "<span class='warning'>[T.His] face is horribly mangled!</span>\n"
+				msg += "<span class='warning'>Лицо серьёзно изуродовано!</span>\n"
 
 	//splints
 	for(var/organ in list(BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM))
 		var/obj/item/organ/external/o = get_organ(organ)
 		if(o && o.splinted && o.splinted.loc == o)
-			msg += "<span class='warning'>[T.He] [T.has] \a [o.splinted] on [T.his] [o.name]!</span>\n"
+			msg += "<span class='warning'>На [o.name] красуется шина!</span>\n"
 
 	if(mSmallsize in mutations)
 		msg += "[T.He] [T.is] small halfling!\n"
@@ -256,7 +256,7 @@
 			if(E.dislocated > 0)
 				wound_flavor_text[E.name] += "Вывихнут сустав!<br>"
 			if(((E.status & ORGAN_BROKEN) && E.brute_dam > E.min_broken_damage) || (E.status & ORGAN_MUTATED))
-				wound_flavor_text[E.name] += "Ух! Да тут всё помято и опухло!<br>"
+				wound_flavor_text[E.name] += "[E.name] в ужасном состоянии!<br>"
 
 		for(var/datum/wound/wound in E.wounds)
 			var/list/embedlist = wound.embedded_objects
@@ -398,6 +398,12 @@
 	set category = "IC"
 
 	pose =  sanitize(input(usr, "This is [src]. [get_visible_gender() == MALE ? "He" : get_visible_gender() == FEMALE ? "She" : "They"]...", "Pose", null)  as text)
+
+
+/*  var/obj/item/organ/external/head/O = locate(/obj/item/organ/external/head) in organs
+	if(O && O.get_teeth() < O.max_teeth)
+		msg += "<span class='warning'><B>[O.get_teeth() <= 0 ? "All" : "[O.max_teeth - O.get_teeth()]"] [T.his] зубов отсутствует</B></span>\n" */
+
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"

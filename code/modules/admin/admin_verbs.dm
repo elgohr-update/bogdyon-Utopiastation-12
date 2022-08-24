@@ -108,6 +108,7 @@ var/list/admin_verbs_fun = list(
 	/client/proc/cmd_admin_dress, //INF WAS /datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
 	/client/proc/drop_bomb,
+//	/client/proc/admin_lightning_strike,
 	/client/proc/cinematic,
 //INF	/datum/admins/proc/toggle_space_ninja,
 	/client/proc/cmd_admin_add_freeform_ai_law,
@@ -137,7 +138,8 @@ var/list/admin_verbs_spawn = list(
 	/datum/admins/proc/spawn_custom_item,
 	/datum/admins/proc/check_custom_items,
 	/datum/admins/proc/spawn_plant,
-	/datum/admins/proc/spawn_atom,		// allows us to spawn instances,
+	/datum/admins/proc/spawn_atom,
+//	/datum/admins/proc/change_weather,		// allows us to spawn instances,
 	/datum/admins/proc/spawn_artifact,
 	/client/proc/spawn_chemdisp_cartridge,
 	/datum/admins/proc/mass_debug_closet_icons,
@@ -177,6 +179,8 @@ var/list/admin_verbs_server = list(
 var/list/admin_verbs_debug = list(
 	/datum/admins/proc/jump_to_fluid_source,
 	/datum/admins/proc/jump_to_fluid_active,
+//	/datum/admins/proc/change_time,
+	/client/proc/SetTimeOfDay,
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/ZASSettings,
 	/client/proc/cmd_debug_make_powernets,
@@ -450,6 +454,30 @@ var/list/admin_verbs_xeno = list(
 				body.key = "@[key]"	//Haaaaaaaack. But the people have spoken. If it breaks; blame adminbus
 		SSstatistics.add_field_details("admin_verb","O") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+/client/proc/SetTimeOfDay()
+	set name = "Set Time of Day"
+	set category = "Stalker"
+
+	var/daytime = input(usr, "Choose time of day to set)", "S.T.A.L.K.E.R.") as null|anything in list("Morning", "Day", "Evening", "Night")
+
+	if(!daytime)
+		return
+
+	switch(daytime)
+		if("Morning")
+			daytime = 1
+		if("Day")
+			daytime = 2
+		if("Evening")
+			daytime = 3
+		if("Night")
+			daytime = 4
+
+
+	usr << "<span class='interface'>Time of day successfully updated.</span>"
+	log_admin("[key_name(usr)] changed time of day to [daytime].")
+	message_admins("[key_name_admin(usr)] changed time of day to [daytime].")
+
 
 /client/proc/invisimin()
 	set name = "Invisimin"
@@ -640,7 +668,6 @@ var/list/admin_verbs_xeno = list(
 		usr.PushClickHandler(/datum/click_handler/build_mode)
 	SSstatistics.add_field_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_and_message_admins("switched build mode for himself.")
-	send2adminirc("[get_key(src)] switched build mode for himself.")  // INF
 
 /client/proc/object_talk(var/msg as text) // -- TLE
 	set category = "Special Verbs"
@@ -958,3 +985,23 @@ var/list/admin_verbs_xeno = list(
 	T.add_spell(new S)
 	SSstatistics.add_field_details("admin_verb","GS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_and_message_admins("gave [key_name(T)] the spell [S].")
+
+/client/proc/set_daytime()
+	set category = "Debug"
+	set name = "Set daytime"
+
+	var/list/modes = list("Brighty day" = "#FFFFFF", "Cloudy day" = "#999999", "Very cloudy day" = "#777777", "Sunset" = "#FFC966", "Bright night" = "#444444", "Dark night" = "#111111", "Sunrise" = "#DEDF64", "Special" = "#FF77FF")
+
+	var/daytime = input(usr, "Select daytime", "Daytime changing.") as null|anything in modes
+
+	if(!daytime)
+		return
+
+	to_world("Changing daytime and weather to [daytime]. This may take a while. Be patient.")
+	spawn(10)
+		for(var/turf/T)
+	//		if(T.z == 1)
+			T.update_starlight()
+//			world << "noice3"
+
+

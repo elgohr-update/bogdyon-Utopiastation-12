@@ -1,10 +1,10 @@
 /obj/item/gun/projectile/shotgun/stalker
 	modifications = list("barrel_shotgun" = 0, "frame_shotgun" = 0, "grip_shotgun" = 0)
 
-/obj/item/gun/projectile/shotgun/stalker/bm16  // Горизонталка
-	name = "BM-16"
-	desc = "Охотничье ружьё - горизонталка. Довольно мощное, в самый раз дл&#255; охоты."
-	eng_desc = "The original Bm16 rifle. Heavy and dangerous two barrel rifle, and its effective in high range too."
+/obj/item/gun/projectile/shotgun/stalker/bm16  // ГѓГ®Г°ГЁГ§Г®Г­ГІГ Г«ГЄГ 
+	name = "Р‘Рњ-16"
+	desc = "РљР°РєРѕРµ-С‚Рѕ СЂР¶Р°РІРѕРµ РѕС…РѕС‚РЅРёС‡СЊРµ СЂСѓР¶СЊС‘. Р•СЃР»Рё РїРѕРІРµР·С‘С‚, С‡С‚Рѕ РІС‹СЃС‚СЂРµР»РёС‚, СѓР±СЊС‘С‚Рµ. Р С‚Рѕ Р»РёС€СЊ РІ СѓРїРѕСЂ."
+	// eng_desc = "The original Bm16 rifle. Heavy and dangerous two barrel rifle, and its effective in high range too."
 	icon_state = "bm16"
 	item_state = "bm16"
 	w_class = 4
@@ -14,7 +14,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/stalker/bm16
 	recoil = 1
 	durability = 150
-	sawn_desc = "Значительно компактней и легче новой двустволки, но эффективен только в ближнем бою. Один из самых распространённых видов оружи&#255; у новичков."
+	sawn_desc = "РџРѕРїСѓР»СЏСЂРЅС‹Р№ Рё СЂР¶Р°РІС‹Р№ РѕР±СЂРµР· РєР°РєРѕРіРѕ-С‚Рѕ РѕС…РѕС‚РЅРёС‡СЊРµРіРѕ СЂСѓР¶СЊСЏ. Р•СЃР»Рё РїРѕРІРµР·С‘С‚, С‡С‚Рѕ РІС‹СЃС‚СЂРµР»РёС‚, СѓР±СЊС‘С‚Рµ. Р С‚Рѕ Р»РёС€СЊ РІ СѓРїРѕСЂ."
 	randomspread = 0
 	spread = 12
 	damagelose = 0.3
@@ -53,10 +53,10 @@
 	else
 		user << "<span class='warning'>[src] is empty!</span>"
 
-/obj/item/gun/projectile/shotgun/stalker/bm16/toz34  //  Вертикалка
-	name = "TOZ-34"
-	desc = "Внутрикурковое двуствольное охотничье ружье с вертикально расположенными стволами. Широко распространённое и ничем особо не примечательное охотничье ружьё - 'вертикалка'."
-	eng_desc = "This extremely common over-and-under hunting shotgun can offer better protection against mutants than a pistol, thanks to its accuracy and stopping power. Used mostly by rookies on the outskirts of the Zone."
+/obj/item/gun/projectile/shotgun/stalker/bm16/toz34  //  Г‚ГҐГ°ГІГЁГЄГ Г«ГЄГ 
+	name = "РўРћР—-34"
+	desc = "РљР°РєРѕРµ-С‚Рѕ СЂР¶Р°РІРѕРµ РѕС…РѕС‚РЅРёС‡СЊРµ СЂСѓР¶СЊС‘. Р•СЃР»Рё РїРѕРІРµР·С‘С‚, С‡С‚Рѕ РІС‹СЃС‚СЂРµР»РёС‚, СѓР±СЊС‘С‚Рµ. Р С‚Рѕ Р»РёС€СЊ РІ СѓРїРѕСЂ. РРјРµРµС‚ С…РѕСЂРѕС€РµРµ РѕСЃС‚Р°РЅР°РІР»РёРІР°СЋС‰РµРµ РґРµР№СЃС‚РІРёРµ."
+	//eng_desc = "This extremely common over-and-under hunting shotgun can offer better protection against mutants than a pistol, thanks to its accuracy and stopping power. Used mostly by rookies on the outskirts of the Zone."
 	icon_state = "toz34"
 	item_state = "toz34"
 	recoil = 0.6
@@ -72,8 +72,8 @@
 	modifications = list("barrel_shotgun" = 0, "frame_shotgun" = 0, "grip_shotgun" = 0)
 
 /obj/item/gun/projectile/shotgun/stalker/bm16/sawnoff
-	name = "sawed-off BM-16"
-	desc = "Значительно компактней и легче новой двустволки, но эффективен только в ближнем бою. Один из самых распространённых видов оружи&#255; у новичков."
+	name = "РћР±СЂРµР· Р‘Рњ-16"
+	desc = "Г‡Г­Г Г·ГЁГІГҐГ«ГјГ­Г® ГЄГ®Г¬ГЇГ ГЄГІГ­ГҐГ© ГЁ Г«ГҐГЈГ·ГҐ Г­Г®ГўГ®Г© Г¤ГўГіГ±ГІГўГ®Г«ГЄГЁ, Г­Г® ГЅГґГґГҐГЄГІГЁГўГҐГ­ ГІГ®Г«ГјГЄГ® Гў ГЎГ«ГЁГ¦Г­ГҐГ¬ ГЎГ®Гѕ. ГЋГ¤ГЁГ­ ГЁГ§ Г±Г Г¬Г»Гµ Г°Г Г±ГЇГ°Г®Г±ГІГ°Г Г­ВёГ­Г­Г»Гµ ГўГЁГ¤Г®Гў Г®Г°ГіГ¦ГЁ&#255; Гі Г­Г®ГўГЁГ·ГЄГ®Гў."
 	eng_desc = "A sawed-off hunting shotgun with two side-by-side barrels, making it lighter and more compact than a full shotgun. One of the most popular weapons among bandits due to its combination of ease of concealment and extreme effectiveness in close combat."
 	sawn_state = SAWN_OFF
 	weapon_weight = WEAPON_LIGHT
@@ -91,7 +91,7 @@
 	..()
 	update_icon()
 
-///////////////////////////// Винтовки //////////////////////////////////////////
+///////////////////////////// Г‚ГЁГ­ГІГ®ГўГЄГЁ //////////////////////////////////////////
 
 /obj/item/weapon/gun/projectile/shotgun/boltaction/enfield
 	name = "Lee Enfield"
@@ -116,7 +116,7 @@
 
 /obj/item/gun/projectile/shotgun/stalker/metro/douplet
 	name = "Doublet"
-	desc = "Собранный местными 'мастерами' двухствольный дробовик. Наименован таким словом как 'Дуплет'."
+	desc = "Г‘Г®ГЎГ°Г Г­Г­Г»Г© Г¬ГҐГ±ГІГ­Г»Г¬ГЁ 'Г¬Г Г±ГІГҐГ°Г Г¬ГЁ' Г¤ГўГіГµГ±ГІГўГ®Г«ГјГ­Г»Г© Г¤Г°Г®ГЎГ®ГўГЁГЄ. ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ ГІГ ГЄГЁГ¬ Г±Г«Г®ГўГ®Г¬ ГЄГ ГЄ 'Г„ГіГЇГ«ГҐГІ'."
 	eng_desc = "Makeshift doublebarrel shotgun, named 'Doublet'."
 	icon_state = "duplet"
 	item_state = "duplet"
@@ -141,7 +141,7 @@
 
 /obj/item/gun/projectile/shotgun/stalker/metro/ashot
 	name = "Ashot"
-	desc = "Несмотр&#255; на примитивность конструкции, этот массово производ&#255;щийс&#255; в Метро картечный пистолет &#255;вл&#255;етс&#255; мощным и надёжным оружием ближнего бо&#255;."
+	desc = "ГЌГҐГ±Г¬Г®ГІГ°&#255; Г­Г  ГЇГ°ГЁГ¬ГЁГІГЁГўГ­Г®Г±ГІГј ГЄГ®Г­Г±ГІГ°ГіГЄГ¶ГЁГЁ, ГЅГІГ®ГІ Г¬Г Г±Г±Г®ГўГ® ГЇГ°Г®ГЁГ§ГўГ®Г¤&#255;Г№ГЁГ©Г±&#255; Гў ГЊГҐГІГ°Г® ГЄГ Г°ГІГҐГ·Г­Г»Г© ГЇГЁГ±ГІГ®Г«ГҐГІ &#255;ГўГ«&#255;ГҐГІГ±&#255; Г¬Г®Г№Г­Г»Г¬ ГЁ Г­Г Г¤ВёГ¦Г­Г»Г¬ Г®Г°ГіГ¦ГЁГҐГ¬ ГЎГ«ГЁГ¦Г­ГҐГЈГ® ГЎГ®&#255;."
 	eng_desc = "Makeshift onelebarrel shotgun, named 'Ashot'. Very effective in small distance."
 	icon_state = "ashot"
 	item_state = "ashot"
@@ -166,7 +166,7 @@
 
 /obj/item/gun/projectile/shotgun/stalker/metro/ashotdouble
 	name = "Ashot"
-	desc = "Несмотр&#255; на примитивность конструкции, этот массово производ&#255;щийс&#255; в Метро картечный пистолет &#255;вл&#255;етс&#255; мощным и надёжным оружием ближнего бо&#255;."
+	desc = "ГЌГҐГ±Г¬Г®ГІГ°&#255; Г­Г  ГЇГ°ГЁГ¬ГЁГІГЁГўГ­Г®Г±ГІГј ГЄГ®Г­Г±ГІГ°ГіГЄГ¶ГЁГЁ, ГЅГІГ®ГІ Г¬Г Г±Г±Г®ГўГ® ГЇГ°Г®ГЁГ§ГўГ®Г¤&#255;Г№ГЁГ©Г±&#255; Гў ГЊГҐГІГ°Г® ГЄГ Г°ГІГҐГ·Г­Г»Г© ГЇГЁГ±ГІГ®Г«ГҐГІ &#255;ГўГ«&#255;ГҐГІГ±&#255; Г¬Г®Г№Г­Г»Г¬ ГЁ Г­Г Г¤ВёГ¦Г­Г»Г¬ Г®Г°ГіГ¦ГЁГҐГ¬ ГЎГ«ГЁГ¦Г­ГҐГЈГ® ГЎГ®&#255;."
 	eng_desc = "Makeshift onelebarrel shotgun, named 'Ashot'. Very effective in small distance."
 	icon_state = "ashotdouble"
 	item_state = "ashot"

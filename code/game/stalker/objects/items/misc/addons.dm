@@ -4,87 +4,57 @@
 	w_class = 2
 
 /obj/item/attachment/suppressor
-	name = "suppressor"
-	desc = "A universal suppressor."
+	name = "Р“Р»СѓС€РёС‚РµР»СЊ"
+	desc = "РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РіР»СѓС€РёС‚РµР»СЊ."
 	icon = 'ivent/obj/guns/projectile.dmi'
 	icon_state = "suppressor"
-	types = list(/obj/item/gun/projectile/pistol/stalker/pm,
-				/obj/item/gun/projectile/pistol/stalker/fort12,
-				/obj/item/gun/projectile/pistol/stalker/usp_match,
-				/obj/item/gun/projectile/stalker/ak74,
-				/obj/item/gun/projectile/stalker/aksu74,
-				/obj/item/gun/projectile/stalker/abakan)
+	types = list(/obj/item/gun/projectile/pistol/pm,
+				/obj/item/gun/projectile/pistol/fort12,
+				/obj/item/gun/projectile/pistol/usp_match,
+				/obj/item/gun/projectile/ak74,
+				/obj/item/gun/projectile/aksu74,
+				/obj/item/gun/projectile/abakan)
 //				/obj/item/gun/projectile/stalker/kiparis
 	var/oldsound = null
 	var/initial_w_class = null
 
 /obj/item/attachment/scope
-	name = "scope"
-	desc = "A universal scope."
+	name = "РџСЂРёС†РµР»"
+	desc = "РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РїСЂРёС†РµР»."
 	icon = 'icons/stalker/weapon_mods.dmi'
 	icon_state = "susat"
 	var/scope_zoom = 1
 
-
-/obj/item/attachment/scope/SUSAT
-	name = "SUSAT"
-	desc = "Оптический прицел фиксированной кратности (4 диоптрии). Чаще всего используется для ведения прицельного огня из лёгкого стрелкового оружия на средние и большие дистанции. Устанавливается на планку Пикатинни."
-//	eng_desc = "A 4x fixed zoom scope produced primarily in Western countries. Attached to weapons by means of the NATO-standard Picatinny rail. Often used for accurate fire from small arms at medium to long range."
-	icon = 'icons/stalker/weapon_mods.dmi'
-	icon_state = "susat"
-	types = list(///obj/item/gun/projectile/automatic/stalker/metro/saiga12,
-				)
-
-/obj/item/attachment/scope/PS
-	types = list(/obj/item/gun/projectile/stalker/aksu74,
-				 /obj/item/gun/projectile/stalker/ak74,
-				 /obj/item/gun/projectile/stalker/abakan)
-
-
 /obj/item/attachment/scope/PS/U1
-	name = "PSU-1"
-	desc = "Оптический прицел фиксированной кратности (2,7 диоптрии). Оптимизирован для боя на средних дистанциях, а также для использования в условиях городской застройки. Для установки на оружие используется стандартное в странах Варшавского договора крепление типа «ласточкин хвост»."
+	name = "РџРЎРЈ-1"
+	desc = "РћРїС‚РёС‡РµСЃРєРёР№ РїСЂРёС†РµР» РґР»СЏ РІРёРЅС‚РѕРІРѕРє СЃРѕРІРµС‚СЃРєРѕРіРѕ РїСЂРѕРёСЃС…РѕР¶РґРµРЅРёСЏ."
 	icon_state = "PSU1"
-	types = list(/obj/item/gun/projectile/stalker/aksu74,
-				/obj/item/gun/projectile/stalker/ak74,
-				/obj/item/gun/projectile/stalker/abakan)
+	types = list(/obj/item/gun/projectile/aksu74,
+				/obj/item/gun/projectile/ak74,
+				/obj/item/gun/projectile/abakan)
 
 
 /obj/item/attachment/scope/PS/O1
-	name = "PSO-1"
-	desc = "Широко распространённый оптический прицел советского производства фиксированной кратности (5). Оснащён шкалой для определения дальности до цели. Для установки на оружие используется стандартное в странах Варшавского договора крепление типа «ласточкин хвост»."
+	name = "РџРЎРћ-1"
+	desc = "РћРїС‚РёС‡РµСЃРєРёР№ РїСЂРёС†РµР» РґР»СЏ РІРёРЅС‚РѕРІРѕРє СЃРѕРІРµС‚СЃРєРѕРіРѕ РїСЂРѕРёСЃС…РѕР¶РґРµРЅРёСЏ."
 	icon_state = "PSO1"
-	types = list(/obj/item/gun/projectile/stalker/aksu74,
-				 /obj/item/gun/projectile/stalker/ak74,
-				 /obj/item/gun/projectile/stalker/abakan)
+	types = list(/obj/item/gun/projectile/aksu74,
+				 /obj/item/gun/projectile/ak74,
+				 /obj/item/gun/projectile/abakan)
 
 
 /obj/item/attachment/scope/rifle
-	name = "rifle scope"
-	desc = "WWII rifle scope"
+	name = "Р’РёРЅС‚РѕРІРѕС‡РЅС‹Р№ РїСЂРёС†РµР»"
+	desc = "РџСЂРёС†РµР» РґР»СЏ РЎРљРЎ. Р’СЂСЏРґ Р»Рё Р’С‹ С‚Р°РєРѕРІСѓСЋ РІРѕРѕР±С‰Рµ РЅР°Р№РґС‘С‚Рµ."
 	icon_state = "rifle"
 	types = list(///obj/item/gun/projectile/shotgun/boltaction/enfield,
-				/obj/item/gun/projectile/stalker/sks)
-
-
-/obj/item/attachment/scope/fnf2000
-	name = "FN-F2000 scope"
-	desc = "Прицел для винтовки FN-F2000."
-	icon_state = "fnf2000-scope"
-	types = list(/obj/item/gun/projectile/stalker/fnf2000)
+				/obj/item/gun/projectile/sks)
 
 /obj/item/attachment/grenadelauncher
-	name = "grenade launcher"
-	desc = "Подствольный гранатомёт."
+	name = "РџРѕРґСЃС‚РІРѕР»СЊРЅРёРє"
+	desc = "РЇР№С†Р° Р»СЋР±РёС‚Рµ? РҐРѕСЂРѕС€Р°СЏ РІРµС‰СЊ РґР»СЏ РљР°Р»Р°С€Р°."
 	icon_state = ""
 	types = list()
-
-/obj/item/attachment/grenadelauncher/fnf2000
-	name = "fn-f2000 grenade launcher"
-	desc = "Подствольный гранатомёт для fn-f2000"
-	icon_state = "fnf2000-gl"
-
-
 
 /obj/item/gun/projectile/verb/deattach()
 	set src in usr.contents
@@ -101,15 +71,15 @@
 			deattach_attachment(selection)
 
 		if(1)
-				//ДОДЕЛАТЬ
+				//Г„ГЋГ„Г…Г‹ГЂГ’Гњ
 			for (var/obj/item/attachment/A in addons)
 				deattach_attachment(A)
 		if(0)
-				//sнужно что-то написать здесь
+				//sГ­ГіГ¦Г­Г® Г·ГІГ®-ГІГ® Г­Г ГЇГЁГ±Г ГІГј Г§Г¤ГҐГ±Гј
 			usr << "<span class='notice'>There are no attachments.</span>"
 			return
 	else
-		usr << "<span class='notice'>Освободите руку.</span>"
+		usr << "<span class='notice'>ГЋГ±ГўГ®ГЎГ®Г¤ГЁГІГҐ Г°ГіГЄГі.</span>"
 	update_icon()
 	return
 

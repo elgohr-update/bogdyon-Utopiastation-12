@@ -230,9 +230,9 @@
 	if(prob(15) && !owner.nervous_system_failure())
 		if(!owner.is_asystole())
 			if(active_breathing)
-				owner.emote("хватает воздух")
+				owner.emote("gasp")
 		else
-			owner.emote(pick("дрожит","дёргается"))
+			owner.emote(pick("shiver","twitch"))
 
 	if(damage || owner.chem_effects[CE_BREATHLOSS] || world.time > last_successful_breath + 2 MINUTES)
 		owner.adjustOxyLoss(HUMAN_MAX_OXYLOSS*breath_fail_ratio)

@@ -3,14 +3,14 @@
 	icon = 'icons/obj/torches.dmi'
 	icon_state = "torch0"
 	item_state = "torch0"
-	name = "Torch"
-	desc = "In radiance may we find victory."
+	name = "Факел"
+	desc = "Таким пользовались ещё в древности. Отличный источник тепла и света в непогоду."
 	var/lit = FALSE
 	var/self_lighting = 0
 
 /obj/item/torch/self_lit
-	name = "Self-igniting Torch"
-	desc = "In radiance may we find victory. This torch provides its own."
+	name = "Факел с тряпкой"
+	desc = "Таким пользовались ещё в древности. Отличный источник тепла и света в непогоду, да и поджечь проще простого."
 	self_lighting = 1
 
 /obj/item/torch/Initialize()
@@ -23,7 +23,7 @@
 	if(lit)
 		icon_state = "torch1"
 		item_state = "torch1"
-		set_light(3, 5, "#E38F46")
+		set_light(6, 3, l_color = COLOR_PALE_ORANGE)
 	else
 		icon_state = "torch0"
 		item_state = "torch0"
@@ -34,7 +34,6 @@
 
 /obj/item/torch/Process()
 	..()
-/*	//This used to be broken, it's instead being commented out for not really needing to be used at the moment. Warfare doesn't simulate atmos.
 	var/datum/gas_mixture/air = loc.return_air()
 	var/oxy_mole = air.get_gas("oxygen")
 	var/total_mole = air.get_total_moles()
@@ -44,13 +43,13 @@
 		if(o2_pressure <= HAZARD_LOW_PRESSURE)
 			snuff()
 
-	//else if(!oxy_mole)
-	//	snuff()
-*/
+	else if(!oxy_mole)
+		snuff()
+
 	if(prob(1)) //Needs playtesting. This seems a little high.
 		if(istype(src.loc, /obj/structure/torchwall))
 			return //Please don't put out torches that are on the walls.
-		visible_message("A rush of wind puts out the torch.")
+		visible_message("Порыв ветра тушит факел.")
 		snuff()
 
 
@@ -85,12 +84,12 @@
 		if(istype(W, /obj/item/clothing/mask/smokable/cigarette))
 			var/obj/item/clothing/mask/smokable/cigarette/C = W
 			C.light()
-			to_chat(user, "You light [C] with [src].")
+			to_chat(user, "Вы поджигаете [C], используя [src].")
 			return
 		if(istype(W, /obj/item/flame/candle))
 			var/obj/item/flame/candle/C = W
 			C.light()
-			to_chat(user, "You light [C] with [src].")
+			to_chat(user, "Вы поджигаете [C], используя [src].")
 			return
 	if(isflamesource(W))
 		light()
@@ -99,7 +98,7 @@
 	name = "torch fixture"
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "torchwall0"
-	desc = "A torch fixture."
+	desc = "Настенный факел."
 	anchored = TRUE
 	layer = ABOVE_HUMAN_LAYER
 
@@ -131,7 +130,7 @@
 	if(lighttorch)
 		if(lighttorch.lit)
 			icon_state = "torchwall1"
-			set_light(6, 3,"#E38F46")
+			set_light(6, 3, l_color = COLOR_PALE_ORANGE)
 
 		else
 			icon_state = "torchwall0"
@@ -175,12 +174,12 @@
 	if(istype(W, /obj/item/clothing/mask/smokable/cigarette))
 		var/obj/item/clothing/mask/smokable/cigarette/C = W
 		C.light()
-		to_chat(user, "You light [C] with [src].")
+		to_chat(user, "Вы поджигаете [C], используя [src].")
 		return
 	if(istype(W, /obj/item/flame/candle))
 		var/obj/item/flame/candle/C = W
 		C.light()
-		to_chat(user, "You light [C] with [src].")
+		to_chat(user, "Вы поджигаете [C], используя [src].")
 		return
 
 	update_icon()
@@ -191,7 +190,7 @@
 	lighttorch.update_icon()
 	lighttorch = null
 	update_icon()
-	playsound(src, 'sound/items/torch_fixture0.ogg', 50, 0, -1)
+	playsound(src, 'sound/items/torch_fixture0.ogg', 65, 0, -1)
 
 // attack with hand - remove torch
 /obj/structure/torchwall/attack_hand(mob/user)
@@ -199,7 +198,7 @@
 	add_fingerprint(user)
 
 	if(!lighttorch)
-		to_chat(user, "There is no torch here.")
+		to_chat(user, "Здесь нет факела.")
 		return
 	// create a torch item and put it in the user's hand
 	user.put_in_active_hand(remove_torch())  //puts it in our active hand

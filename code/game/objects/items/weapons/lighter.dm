@@ -24,7 +24,7 @@
 
 /obj/item/flame/lighter/proc/light(mob/user)
 	if(submerged())
-		to_chat(user, "<span class='warning'>You cannot light \the [src] underwater.</span>")
+		to_chat(user, "<span class='warning'>Нельзя зажечь зажигалку под водой.</span>")
 		return
 	lit = 1
 	update_icon()
@@ -34,14 +34,14 @@
 
 /obj/item/flame/lighter/proc/light_effects(mob/living/carbon/user)
 	if(prob(95))
-		user.visible_message("<span class='notice'>After a few attempts, [user] manages to light \the [src].</span>")
+		user.visible_message("<span class='notice'>После нескольких попыток, [user] зажигает зажигалку.</span>")
 	else
-		to_chat(user, "<span class='warning'>You burn yourself while lighting the lighter.</span>")
+		to_chat(user, "<span class='warning'>Вы поджигаете себя, пытаясь зажечь зажигалку.</span>")
 		if (user.l_hand == src)
 			user.apply_damage(2,BURN,BP_L_HAND)
 		else
 			user.apply_damage(2,BURN,BP_R_HAND)
-		user.visible_message("<span class='notice'>After a few attempts, [user] manages to light \the [src], burning their finger in the process.</span>")
+		user.visible_message("<span class='notice'>После нескольких попыток, [user] пытается зажечь зажигалку, при этом обжигая свои пальцы.</span>")
 	playsound(src.loc, "light_bic", 100, 1, -4)
 
 /obj/item/flame/lighter/extinguish(var/mob/user, var/no_message)
@@ -50,18 +50,18 @@
 	if(user)
 		shutoff_effects(user)
 	else if(!no_message)
-		visible_message("<span class='notice'>[src] goes out.</span>")
+		visible_message("<span class='notice'>В зажигалке закончилось топливо.</span>")
 	set_light(0)
 
 /obj/item/flame/lighter/proc/shutoff_effects(mob/user)
-	user.visible_message("<span class='notice'>[user] quietly shuts off the [src].</span>")
+	user.visible_message("<span class='notice'>[user] тихонько тушит зажигалку.</span>")
 
 /obj/item/flame/lighter/attack_self(mob/living/user)
 	if(!lit)
 		if(reagents.has_reagent(/datum/reagent/fuel))
 			light(user)
 		else
-			to_chat(user, "<span class='warning'>\The [src] won't ignite - it must be out of fuel.</span>")
+			to_chat(user, "<span class='warning'>Не горит. Кажись, топливо закончилось.</span>")
 	else
 		extinguish(user)
 
@@ -86,14 +86,14 @@
 			if(M == user)
 				cig.attackby(src, user)
 			else
-				cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights the [cig.name].</span>")
+				cig.light("<span class='notice'>[user] зажигает сигарету, используя свою зажигалку.</span>")
 			return
 	..()
 
 /obj/item/flame/lighter/Process()
 	if(!submerged() && reagents.has_reagent(/datum/reagent/fuel))
 		if(ismob(loc) && prob(10) && reagents.get_reagent_amount(/datum/reagent/fuel) < 1)
-			to_chat(loc, "<span class='warning'>\The [src]'s flame flickers.</span>")
+			to_chat(loc, "<span class='warning'>Пламя зажигалки мерцает.</span>")
 			set_light(0)
 			addtimer(CALLBACK(src, .atom/proc/set_light, 0.6, 0.5, 2), 4)
 		reagents.remove_reagent(/datum/reagent/fuel, 0.05)
@@ -152,18 +152,18 @@
 		item_state = "[bis.base_icon_state]"
 
 /obj/item/flame/lighter/zippo/light_effects(mob/user)
-	user.visible_message("<span class='rose'>Without even breaking stride, [user] flips open and lights [src] in one smooth movement.</span>")
+	user.visible_message("<span class='rose'>Не нарушив ни единого шага, [user] щёлкает крышечкой и зажигает [src] в одно движение.</span>")
 	playsound(src.loc, 'sound/items/zippo_open.ogg', 100, 1, -4)
 
 /obj/item/flame/lighter/zippo/shutoff_effects(mob/user)
-	user.visible_message("<span class='rose'>You hear a quiet click, as [user] shuts off [src] without even looking at what they're doing.</span>")
+	user.visible_message("<span class='rose'>Вы слышите тихий щелчок, как только [user] закрывает [src], при этом даже не наблюдая за процессом.</span>")
 	playsound(src.loc, 'sound/items/zippo_close.ogg', 100, 1, -4)
 
 /obj/item/flame/lighter/zippo/afterattack(obj/O, mob/user, proximity)
 	if(!proximity) return
 	if (istype(O, /obj/structure/reagent_dispensers/fueltank) && !lit)
 		O.reagents.trans_to_obj(src, max_fuel)
-		to_chat(user, "<span class='notice'>You refuel [src] from \the [O]</span>")
+		to_chat(user, "<span class='notice'>Вы перезаправляете [src] с [O]</span>")
 		playsound(src.loc, 'sound/effects/refill.ogg', 50, 1, -6)
 
 /obj/item/flame/lighter/zippo/black
